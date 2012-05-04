@@ -1,0 +1,4 @@
+# Application dependencies
+
+require:
+    play -> logisimayml-1.8
