@@ -5,11 +5,15 @@
 # Home page
 GET     /                                       Application.index
 
-GET 	/form									Application.form
+GET 	/formTask								Application.formTask
 
-GET 	/delete/{id}							Application.delete
+GET 	/deleteTask/{id}						Application.deleteTask
 
-POST	/save									Application.save
+POST	/saveTask								Application.saveTask
+
+GET 	/formUser								Application.formUser
+
+GET 	/formTaskType							Application.formTaskType
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
@@ -19,3 +23,6 @@ GET     /public/                                staticDir:public
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
+
+# Import Secure routes
+*       /		                                module:secure

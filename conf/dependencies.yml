@@ -1,4 +1,8 @@
 # Application dependencies
 
 require:
-    play -> logisimayml-1.8
+    - play 1.2.4
+  
+    - play -> logisimayml-1.8
+    
+    - play -> secure

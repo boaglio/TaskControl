@@ -12,6 +12,8 @@ models.TaskType(models_TaskType_1):
 models.User(models_User_1):
  "name": "Eduardo Cerqueira"
  "email": "eduardo@webstart.com.br"
+ "admin": true
+ "password": "ciu7785"
 
 models.Task(models_Task_3):
  "taskType": "models_TaskType_1"
@@ -21,6 +23,8 @@ models.Task(models_Task_3):
 models.User(models_User_2):
  "name": "Fernando Boaglio"
  "email": "fernando@boaglio.com"
+ "admin": false
+ "password": asdqwe123
 
 models.TaskType(models_TaskType_2):
  "description": "Manutenção"

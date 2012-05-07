@@ -7,8 +7,9 @@ import play.test.Fixtures;
 @OnApplicationStart
 public class Bootstrap extends Job {
 	
+	@SuppressWarnings("deprecation")
 	public void doJob() {
-        if(User.count() == 0 || TaskType.count() == 0) {
+        if(User.count() == 0 | TaskType.count() == 0) {
             Fixtures.load("data.yml");
         }
     }

@@ -12,6 +12,12 @@ public class User extends Model {
 	public String name;
 	
 	@Required
-	public String email; 
+	public String email;
+
+	@Required
+	public String password; 
+	
+	@Required
+	public boolean admin; 
 	
 }
