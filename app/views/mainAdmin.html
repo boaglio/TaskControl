@@ -9,8 +9,10 @@
     </head>
     <body>
     	<nav>
-   			<a id="home" href="@{Application.index()}">Inicio</a>
-   			<a id="new" href="@{Application.formTask()}">Nova Tarefa</a>
+   			#{secure.check "administrator"}
+   			<a id="new" href="@{Admin.formUser()}">Usuarios</a>
+			<a id="new" href="@{Admin.formTasktype()}">Tipos de Tarefas</a>
+			#{/secure.check}
 			<a href="@{Secure.logout()}">Sair</a>
    		</nav>
 		#{doLayout /}

@@ -1,0 +1,42 @@
+#{extends './../mainAdmin.html' /}
+#{set title:'Home' /}
+<div>
+#{form @saveTaskType()}
+	<input type="hidden" name="taskType.id" value="${taskType?.id}">
+
+	<p class="field">
+		<label for="descricaotarefa"><strong>Tipo Tarefa:</strong></label>
+		<input type="text" name="taskType.description" value="${taskType?.description}"></input>
+	</p>
+	
+	<p class="buttons">
+		<input type="button" value="Cancelar" onclick="location.href='@{index()}'"> 
+		<input type="submit" value="Salvar">
+	</p>
+	
+#{/form}
+</div>
+
+<div>
+<table >
+	<thead>
+  		<tr>
+  			<th>Id</th>
+		    <th>Descricao</th>
+		    <th>Editar</th>
+		    <th>Deletar</th>
+		  </tr>
+		  
+	</thead>
+	<tbody>
+		#{list items:taskTypes, as:'taskType'}
+		<tr>
+			<td>${taskType.id}</td>
+			<td>${taskType?.description}</td>
+			<td><a href="@{formTaskType(taskType.id)}">Editar</a></td>
+			<td><a href="@{deleteTaskType(taskType.id)}">Deletar</a></td>
+		</tr>
+		#{/list}
+    </tbody>
+</table>
+</div>

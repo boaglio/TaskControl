@@ -1,0 +1,58 @@
+#{extends './../mainAdmin.html' /}
+#{set title:'Home' /}
+<div>
+#{form @saveUser()}
+	<p class="field">
+		<label for="nomeusuario"><strong>Nome usuario:</strong></label>
+		<input type="text" name="user.name" value="${user?.name}"></input>
+	</p>
+	
+	<p class="field">
+		<label for="emailusuario"><strong>Email:</strong></label>
+		<input type="text" name="user.email" value="${user?.email}"></input>
+	</p>
+
+	<p class="field">
+		<label for="nomeusuario"><strong>Administrador ?:</strong></label>
+		<input type="checkbox" name="user.admin" ></input>
+	</p>
+	<input type="hidden" name="user.id" value="${user?.id}"></input>
+	<p class="buttons">
+		<input type="button" value="Cancelar" onclick="location.href='@{index()}'"> 
+		<input type="submit" value="Salvar">
+	</p>
+	
+	 <script type="text/javascript" charset="${_response_encoding}">
+        $("#initialDate").datepicker({dateFormat:'yy-mm-dd', showAnim:'fadeIn'})
+	</script>
+#{/form}
+</div>
+
+<div>
+<table >
+	<thead>
+  		<tr>
+  			<th>Id</th>
+		    <th>Nome</th>
+		    <th>Email</th>
+		    <th>Admin</th>
+		    <th>Editar</th>
+		    <th>Deletar</th>
+		  </tr>
+		  
+	</thead>
+	<tbody>
+		#{list items:users, as:'user'}
+		<tr>
+			<td>${user.id}</td>
+			<td>${user?.name}</td>
+			<td>${user?.email}</td>
+			<td>${user?.admin}</td>
+			<td><a href="@{formUser(user.id)}">Editar</a></td>
+			<td><a href="@{deleteUser(user.id)}">Deletar</a></td>
+		</tr>
+		#{/list}
+    </tbody>
+</table>
+
+</div>

@@ -11,10 +11,6 @@ GET 	/deleteTask/{id}						Application.deleteTask
 
 POST	/saveTask								Application.saveTask
 
-GET 	/formUser								Application.formUser
-
-GET 	/formTaskType							Application.formTaskType
-
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
@@ -25,4 +21,6 @@ GET     /public/                                staticDir:public
 *       /{controller}/{action}                  {controller}.{action}
 
 # Import Secure routes
-*       /		                                module:secure
+GET     /admin/?                                Admin.index
+
+*       /admin		                            module:secure
