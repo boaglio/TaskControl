@@ -1,4 +1,4 @@
-#{extends './../mainAdmin.html' /}
+#{extends 'main.html' /}
 #{set title:'TaskControl - DashBoard' /}
 <table >
 	<thead>
@@ -6,7 +6,6 @@
 		    <th>Id</th>
 		    <th>Nome</th>
 		    <th>Email</th>
-		    <th>Admin</th>
 		    <th>Editar</th>
 		    <th>Deletar</th>
 		  </tr>
@@ -18,9 +17,8 @@
 			<td>${user.id}</td>
 			<td>${user.name}</td>
 			<td>${user.email}</td>
-			<td>${user.admin?'Sim':'Nao'}</td>
-			<td><a href="@{formUser(user.id)}">Editar</a></td>
-			<td><a href="@{deleteUser(user.id)}">Deletar</a></td>
+			<td><a href="@{UserController.formUser(user.id)}">Editar</a></td>
+			<td><a href="@{UserController.deleteUser(user.id)}">Deletar</a></td>
 		</tr>
 		#{/list}
     </tbody>

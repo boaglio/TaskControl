@@ -21,6 +21,4 @@ GET     /public/                                staticDir:public
 *       /{controller}/{action}                  {controller}.{action}
 
 # Import Secure routes
-GET     /admin/?                                Admin.index
-
-*       /admin		                            module:secure
+*       /	                            		module:secure
