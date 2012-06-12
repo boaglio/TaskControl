@@ -6,10 +6,10 @@
     <body>
     	<nav>
    			<a id="home" href="@{Application.index()}">Inicio</a>
-   			<a id="new" href="@{TaskController.formTask()}">Nova Tarefa</a>
+   			<a id="new" href="@{Tasks.formTask()}">Nova Tarefa</a>
    			#{secure.check "administrator"}
-   			<a id="usuario" href="@{UserController.index()}">Usuarios</a>
-			<a id="new" href="@{TaskTypeController.formTasktype()}">Tipos de Tarefas</a>
+   			<a id="usuario" href="@{Users.index()}">Usuarios</a>
+			<a id="new" href="@{TaskTypes.formTasktype()}">Tipos de Tarefas</a>
 			#{/secure.check}
 	   		<a id="login" href="@{Secure.login()}">Login</a>
 			<a href="@{Secure.logout()}">Sair</a>

@@ -9,7 +9,7 @@ import models.User;
 
 @With(Secure.class)
 @Check("administrator")
-public class UserController extends Controller {
+public class Users extends Controller {
 
 	public static void index() {
 		List<User> users = User.findAll();

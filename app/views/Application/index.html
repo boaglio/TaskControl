@@ -19,8 +19,8 @@
 			<td>${task.taskType?.description}</td>
 			<td>${task.user?.name}</td>
 			<td>${task.initialDate?.format('yyy-MM-dd')}</td>
-			<td><a href="@{TaskController.formTask(task.id)}">Editar</a></td>
-			<td><a href="@{TaskController.deleteTask(task.id)}">Deletar</a></td>
+			<td><a href="@{Tasks.formTask(task.id)}">Editar</a></td>
+			<td><a href="@{Tasks.deleteTask(task.id)}">Deletar</a></td>
 		</tr>
 		#{/list}
     </tbody>

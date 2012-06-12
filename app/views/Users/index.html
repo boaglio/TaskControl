@@ -1,5 +1,10 @@
 #{extends 'main.html' /}
 #{set title:'TaskControl - DashBoard' /}
+
+#{secure.check "administrator"}
+	#{include 'Users/formUser.html'/}
+#{/secure.check}
+
 <table >
 	<thead>
   		<tr>
@@ -17,8 +22,8 @@
 			<td>${user.id}</td>
 			<td>${user.name}</td>
 			<td>${user.email}</td>
-			<td><a href="@{UserController.formUser(user.id)}">Editar</a></td>
-			<td><a href="@{UserController.deleteUser(user.id)}">Deletar</a></td>
+			<td><a href="@{Users.formUser(user.id)}">Editar</a></td>
+			<td><a href="@{Users.deleteUser(user.id)}">Deletar</a></td>
 		</tr>
 		#{/list}
     </tbody>

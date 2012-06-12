@@ -10,7 +10,7 @@ import models.TaskType;
 import models.User;
 
 @With(Secure.class)
-public class TaskController extends Controller {
+public class Tasks extends Controller {
 
 	public static void formTask(Long id) {
     	List<User> users = User.findAll();

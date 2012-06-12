@@ -17,7 +17,5 @@ public class Application extends Controller {
     	List<Task> tasks = Task.findAll();
     	render(tasks);
     }
-    
-    
 
 }
