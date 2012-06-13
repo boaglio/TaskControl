@@ -1,0 +1,30 @@
+#{extends 'main.html' /}
+#{set title:'TaskControl - DashBoard' /}
+
+#{secure.check "administrador"}
+	#{include 'Usuarios/formUsuario.html'/}
+#{/secure.check}
+
+<table >
+	<thead>
+  		<tr>
+		    <th>Id</th>
+		    <th>Nome</th>
+		    <th>Email</th>
+		    <th>Editar</th>
+		    <th>Deletar</th>
+		  </tr>
+		  
+	</thead>
+	<tbody>
+		#{list items:usuarios, as:'usuario'}
+		<tr>
+			<td>${usuario.id}</td>
+			<td>${usuario.nome}</td>
+			<td>${usuario.email}</td>
+			<td><a href="@{Usuarios.formUsuario(usuario.id)}">Editar</a></td>
+			<td><a href="@{Usuarios.deletarUsuario(usuario.id)}">Deletar</a></td>
+		</tr>
+		#{/list}
+    </tbody>
+</table>

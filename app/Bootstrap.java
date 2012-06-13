@@ -1,5 +1,5 @@
-import models.TaskType;
-import models.User;
+import models.TipoTarefa;
+import models.Usuario;
 import play.jobs.Job;
 import play.jobs.OnApplicationStart;
 import play.test.Fixtures;
@@ -9,7 +9,7 @@ public class Bootstrap extends Job {
 	
 	@SuppressWarnings("deprecation")
 	public void doJob() {
-        if(User.count() == 0 | TaskType.count() == 0) {
+        if(Usuario.count() == 0 | TipoTarefa.count() == 0) {
             Fixtures.load("data.yml");
         }
     }

@@ -1,0 +1,35 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+<div>
+#{form @salvarUsuario()}
+	<p class="field">
+		<label for="nomeusuario"><strong>Nome usuario:</strong></label>
+		<input type="text" name="usuario.nome" value="${usuario?.nome}"></input>
+	</p>
+	
+	<p class="field">
+		<label for="emailusuario"><strong>Senha:</strong></label>
+		<input type="password" name="usuario.senha" value="${usuario?.senha}"></input>
+	</p>
+	
+	<p class="field">
+		<label for="emailusuario"><strong>Email:</strong></label>
+		<input type="text" name="usuario.email" value="${usuario?.email}"></input>
+	</p>
+	
+	<p class="field">
+	  <label>É administrador ?:</label>
+	  <input type="checkbox" name="usuario.isAdmin" ${usuario?.isAdmin ? 'checked':''}/>
+	  <input type="hidden" name="usuario.isAdmin" value="false" />
+	</p>
+	
+
+	<input type="hidden" name="usuario.id" value="${usuario?.id}"></input>
+	<p class="buttons">
+		<input type="button" value="Cancelar" onclick="location.href='@{index()}'"> 
+		<input type="submit" value="Salvar">
+	</p>
+	
+#{/form}
+</div>
+

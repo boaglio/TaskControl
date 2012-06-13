@@ -1,0 +1,368 @@
+Interest(play):
+    name: Play!
+ 
+Interest(java):
+    name: Java
+ 
+Interest(tdd):
+    name: TDD
+ 
+Interest(hadoop):
+    name: Hadoop
+
+Interest(javascript):
+    name: JavaScript
+
+Interest(coffeescript):
+    name: CoffeeScript
+
+Interest(spring):
+    name: Spring
+
+Interest(nodejs):
+    name: NodeJS
+
+Interest(stripes):
+    name: Stripes
+
+Interest(cdi):
+    name: CDI
+    
+Interest(javaee):
+    name: JavaEE
+    
+Interest(cloud):
+    name: Cloud
+    
+Interest(html5):
+    name: HTML5
+    
+Interest(git):
+    name: Git
+    
+Interest(jquery):
+    name: JQuery
+    
+Interest(devops):
+    name: DevOps
+    
+Interest(scrum):
+    name: Scrum
+    
+Interest(kanban):
+    name: Kanban
+    
+Interest(kotlin):
+    name: Kotlin
+    
+Interest(dart):
+    name: Dart
+    
+Staff(cedric) :
+    firstname: Cédric
+    lastname: Exbrayat
+    login: cedric
+    email: cexbrayat@gmail.com
+    company : SQLi
+    shortDescription : |
+        Je m'appelle Cédric, et je me présente qu'avec moins de 140 caractères.
+    badges:           
+         - Staff
+         - Attendee
+
+models.auth.LinkItAccount(cedLinkIt):
+    provider: LinkIt
+    member: cedric
+    #password: ced
+    password: wBwZK4RAmC0QYepj1gqkQsMzAFdVPvEZqin1l536fPs=
+
+TwitterAccount(cedTwitter):
+    provider: Twitter
+    member: cedric
+    screenName: cedric_exbrayat
+
+GoogleAccount(cedGoogle):
+    provider: Google
+    member: cedric
+    googleId: 108783492614745057153
+
+SharedLink(cedLink1):
+    member: cedric
+    ordernum: 0
+    name: Mon Github
+    URL: https://github.com/cexbrayat
+
+SharedLink(cedLink2):
+    member: cedric
+    ordernum: 1
+    name: Mon blog HypeDrivenDev
+    URL: http://hypedrivendev.wordpress.com/
+
+Staff(julien) :
+    firstname: Julien
+    lastname: Ripault
+    login: julien
+    email: tluapir@gmail.com
+    shortDescription : Entretenir mes cheveux et ma guitare sont mes activités principales.
+    badges:           
+         - Staff
+         - Attendee
+
+SharedLink(juLink1):
+    member: julien
+    ordernum: 0
+    name: "Ma passion : la musique"
+    URL: http://lolannonces.fr/tag/frederic-francois/
+
+models.auth.LinkItAccount(juLinkIt):
+    provider: LinkIt
+    member: julien
+    #password: julien
+    password: 6eZDiYfyb+WLEqDA+jIvdrGh20Q2JsaTYUfir9MK8R4=
+
+TwitterAccount(juTwitter):
+    provider: Twitter
+    member: julien
+    screenName: julien_ripault
+
+GoogleAccount(juGoogle):
+    provider: Google
+    member: julien
+    googleId: 105928763613547015053
+    
+Staff(agnes) :
+    firstname: Agnès
+    lastname: Crépet
+    login: agnes
+    email: agnes.crepet@gmail.com
+    company: Laboratoires Boiron
+    shortDescription : Joe Strummer et Gérald Quintana sont mes deux idôles.
+    badges:           
+         - Staff
+         - Attendee
+
+models.auth.LinkItAccount(agnesAccount):
+    provider: LinkIt
+    member: agnes
+    #password: agnes
+    password: 0lRrZMdxhqH6oAGG+cHvAjJpAOyaltooDM0fnCmfO10=
+
+TwitterAccount(agnesTwitter):
+    provider: Twitter
+    member: agnes
+    screenName: agnes_crepet
+
+GoogleAccount(agnesGoogle):
+    provider: Google
+    member: agnes
+    googleId: 116189330666769817164
+
+Staff(franck) :
+    firstname: Franck
+    lastname: Depierre
+    login: franck
+    email: franck.depierre@gmail.com
+    company: Arkoon
+    shortDescription : CARA *for ever*!
+    interests:
+         - scrum
+         - kanban
+    badges:           
+         - Staff
+         - Attendee
+
+models.auth.LinkItAccount(franckLinkIt):
+    provider: LinkIt
+    member: franck
+    #password: franck
+    password: mFBmUOjEN+QKtxBXXYGQ0Kygiwgp6iW1+hobp6eavcU=
+
+TwitterAccount(franckTwitter):
+    provider: Twitter
+    member: franck
+    screenName: FranckDepierre
+
+GoogleAccount(franckGoogle):
+    provider: Google
+    member: franck
+    googleId: 111489000265528223150
+
+Staff(romain) :
+    firstname: Romain
+    lastname: Couturier
+    login: romain
+    email: couturier.romain@gmail.com
+    company: WinMagine
+    shortDescription : WinMagine *for ever*!
+    interests:
+         - scrum
+         - kanban
+    badges:           
+         - Staff
+         - Attendee
+
+models.auth.LinkItAccount(romainLinkIt):
+    provider: LinkIt
+    member: romain
+    #password: romain
+    password: QcoZcBEjWHxmsXetM1Xp/jxM71eq/+6c0BtjkqoRZl8=
+
+TwitterAccount(romainTwitter):
+    provider: Twitter
+    member: romain
+    screenName: romaincouturier
+
+GoogleAccount(romainGoogle):
+    provider: Google
+    member: romain
+    googleId: 113173388528230315265
+
+Staff(nicolas) :
+    firstname: Nicolas
+    lastname: Pelloux-Prayer
+    login: nicolas
+    email: nicolaspellouxprayer@gmail.com
+    shortDescription : CARA *for ever*!
+    interests:
+         - scrum
+         - kanban
+    badges:           
+         - Staff
+         - Attendee
+
+models.auth.LinkItAccount(nicolasLinkIt):
+    provider: LinkIt
+    member: nicolas
+    #password: nicolas
+    password: 2NlOQ+QV47f1N+qoX/OTAsaxP5CjOamLrLleNKTE2j8=
+
+TwitterAccount(nicolasTwitter):
+    provider: Twitter
+    member: nicolas
+    screenName: npelloux
+
+GoogleAccount(nicolasGoogle):
+    provider: Google
+    member: nicolas
+    googleId: 105069688047906196113
+
+Staff(mathieu) :
+    firstname: Mathieu
+    lastname: Calba
+    login: mathieu
+    email: mathieu.calba@gmail.com
+    shortDescription : Android *for ever*!
+    interests:
+         - java
+    badges:           
+         - Staff
+         - Attendee
+
+models.auth.LinkItAccount(mathieuLinkIt):
+    provider: LinkIt
+    member: mathieu
+    #password: mathieu
+    password: Q8ZCnQXbEZu7EnAtOG4N1fu3s16uYuYkf/WwbHbw+H8=
+
+TwitterAccount(mathieuTwitter):
+    provider: Twitter
+    member: mathieu
+    screenName: npelloux
+
+GoogleAccount(mathieuGoogle):
+    provider: Google
+    member: mathieu
+    googleId: 114873422112541119407
+
+Staff(clacote) :
+    firstname: Cyril
+    lastname: Lacôte
+    login: clacote
+    email: cyril.lacote@gmail.com
+    shortDescription : Freelance Java Developer (of this website amongst other stuff)
+    interests:
+         - java
+         - javascript
+    badges:           
+         - Staff
+         - Attendee
+
+models.auth.LinkItAccount(clacoteLinkIt):
+    provider: LinkIt
+    member: clacote
+    #password: clacote
+    password: P1V0ZieYpj3ToyLW2IVeN6JV2dp5Y65fPL3/gluKT88=
+
+TwitterAccount(clacoteTwitter):
+    provider: Twitter
+    member: clacote
+    screenName: clacote
+
+GoogleAccount(clacoteGoogle):
+    provider: Google
+    member: clacote
+    googleId: 114128610730314333831
+
+Member(pamelafox) :
+    firstname: Pamela
+    lastname: Fox
+    login: pamelafox
+    email: pamela.fox@gmail.com
+    shortDescription : I like to make, to teach, and to learn. Right now, I'm working on @EatDifferent, a tool to help people change how they eat.
+    interests:
+         - javascript
+    badges:           
+         - Speaker
+         - Attendee
+
+TwitterAccount(pamelafoxTwitter):
+    provider: Twitter
+    member: pamelafox
+    screenName: pamelafox
+
+GoogleAccount(pamelafoxGoogle):
+    provider: Google
+    member: pamelafox
+    googleId: 104906919451670502090
+
+Article(article1):
+    title: Mix-IT 2012!
+    headline: Mix-IT seconde édition est annoncée pour le 26 avril 2012
+    content: |
+        Vous l'attendiez tous... et bien voilà la conf [Mix-IT](http://www.mix-it.fr) 2012 aura lieu le 26 avril 2012 à Lyon! Stay tuned! Au programme on vous prépare toujours un bon mix de Java et d'Agilité, ainsi que d'autres langages et technologies innovantes.
+    author: agnes
+    postedAt: 2011-11-25
+    valid: true
+    
+Sponsor(zenika):
+    logoUrl: http://www.zenika.com/templates/zenika/images/logo.gif
+    firstname: Zenika
+    lastname: Lyon
+    login: zenika
+    company: Zenika
+    email: info@zenika.com
+    shortDescription : Zenika, experts en technologies Open Source et méthodes Agiles
+    badges:
+         - Sponsor
+
+TwitterAccount(zenikaTwitter):
+    provider: Twitter
+    member: zenika
+    screenName: ZenikaLyon
+
+GoogleAccount(zenikaGoogle):
+    provider: Google
+    member: zenika
+    googleId: 113791145461957319034
+
+SharedLink(zenikaLink1):
+    member: zenika
+    ordernum: 0
+    name: Site web
+    URL: http://www.zenika.com
+
+SharedLink(zenikaLink2):
+    member: zenika
+    ordernum: 1
+    name: Blog
+    URL: http://blog.zenika.com

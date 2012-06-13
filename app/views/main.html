@@ -6,12 +6,11 @@
     <body>
     	<nav>
    			<a id="home" href="@{Application.index()}">Inicio</a>
-   			<a id="new" href="@{Tasks.formTask()}">Nova Tarefa</a>
-   			#{secure.check "administrator"}
-   			<a id="usuario" href="@{Users.index()}">Usuarios</a>
-			<a id="new" href="@{TaskTypes.formTasktype()}">Tipos de Tarefas</a>
+   			<a id="new" href="@{Tarefas.formTarefa()}">Nova Tarefa</a>
+   			#{secure.check "administrador"}
+   			<a id="usuario" href="@{Usuarios.index()}">Usuarios</a>
+			<a id="new" href="@{TiposTarefas.formTipoTarefa()}">Tipos de Tarefas</a>
 			#{/secure.check}
-	   		<a id="login" href="@{Secure.login()}">Login</a>
 			<a href="@{Secure.logout()}">Sair</a>
    		</nav>
 		#{doLayout /}

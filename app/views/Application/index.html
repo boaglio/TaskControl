@@ -13,14 +13,14 @@
 		  
 	</thead>
 	<tbody>
-		#{list items:tasks, as:'task'}
+		#{list items:tarefas, as:'tarefa'}
 		<tr>
-			<td>${task.id}</td>
-			<td>${task.taskType?.description}</td>
-			<td>${task.user?.name}</td>
-			<td>${task.initialDate?.format('yyy-MM-dd')}</td>
-			<td><a href="@{Tasks.formTask(task.id)}">Editar</a></td>
-			<td><a href="@{Tasks.deleteTask(task.id)}">Deletar</a></td>
+			<td>${tarefa.id}</td>
+			<td>${tarefa.tipoTarefa?.descricao}</td>
+			<td>${tarefa.usuario?.nome}</td>
+			<td>${tarefa.dataInicial?.format('yyy-MM-dd')}</td>
+			<td><a href="@{Tarefas.formTarefa(task.id)}">Editar</a></td>
+			<td><a href="@{Tarefas.deletarTarefa(task.id)}">Deletar</a></td>
 		</tr>
 		#{/list}
     </tbody>

@@ -2,4 +2,4 @@
 # For example, for French create a messages.fr file
 #
 
-taskType.required= O campo descrição deve ser preenchido
+tipoTarefa.required= O campo descrição deve ser preenchido

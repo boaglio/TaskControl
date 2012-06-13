@@ -1,0 +1,51 @@
+#{extends './../main.html' /}
+#{set title:'Home' /}
+<div>
+
+#{form @salvarTipoTarefa()}
+
+	<input type="hidden" name="tipoTarefa.id" value="${tipoTarefa?.id}">
+
+
+	<p class="field">
+		<label for="descricaotarefa"><strong>Tipo Tarefa:</strong></label>
+		<input type="text" name="tipoTarefa.descricao" value="${tipoTarefa?.descricao}"></input>
+	</p>
+	
+	#{if flash.error}
+		<p class="error">
+			&{flash.error}
+		</p>
+	#{/if}
+	
+	<p class="buttons">
+		<input type="button" value="Cancelar" onclick="location.href='@{Application.index()}'"> 
+		<input type="submit" value="Salvar">
+	</p>
+	
+#{/form}
+</div>
+
+<div>
+<table >
+	<thead>
+  		<tr>
+  			<th>Id</th>
+		    <th>Descricao</th>
+		    <th>Editar</th>
+		    <th>Deletar</th>
+		  </tr>
+		  
+	</thead>
+	<tbody>
+		#{list items:tipoTarefas, as:'tipoTarefa'}
+		<tr>
+			<td>${tipoTarefa.id}</td>
+			<td>${tipoTarefa?.descricao}</td>
+			<td><a href="@{formTipoTarefa(tipoTarefa.id)}">Editar</a></td>
+			<td><a href="@{deletarTipoTarefa(tipoTarefa.id)}">Deletar</a></td>
+		</tr>
+		#{/list}
+    </tbody>
+</table>
+</div>

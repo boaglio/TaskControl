@@ -1,0 +1,35 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+<div>
+#{form @salvarTarefa()}
+	<input type="hidden" name="task.id" value="${task?.id}">
+	<p class="field">
+		<label for="tipotarefa"><strong>Tipo Tarefa:</strong></label>
+		#{select 'tarefa.tipoTarefa.id', value:tarefa?.tipoTarefa?.id, items:tiposTarefa, labelProperty:'descricao' /}
+	</p>
+	
+	<p class="field">
+		<label for="responsavel"><strong>Responsavel:</strong></label>
+		#{select 'tarefa.usuario.id', value:tarefa?.usuario?.id, items:usuarios, labelProperty:'nome'/}
+	</p>
+	
+	<p class="field">
+		<label for="datainicio"><strong>Data Inicio:</strong></label>
+		<input type="text" id="dataInicial" name="tarefa.dataInicial" value="${tarefa?.dataInicial?.format('yyyy-MM-dd')}">
+	</p>
+	
+	<p class="field">
+		<label for="descricaotarefa"><strong>Descricao Tarefa:</strong></label>
+		<textarea name="tarefa.descricao" rows="10" cols="57">${tarefa?.descricao}</textarea>
+	</p>
+	
+	<p class="buttons">
+		<input type="button" value="Cancelar" onclick="location.href='@{Application.index()}'"> 
+		<input type="submit" value="Salvar Tarefa">
+	</p>
+	
+	 <script type="text/javascript" charset="${_response_encoding}">
+        $("#dataInicial").datepicker({dateFormat:'yy-mm-dd', showAnim:'fadeIn'})
+	</script>
+#{/form}
+</div>
